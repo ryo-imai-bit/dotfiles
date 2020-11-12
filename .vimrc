@@ -1,8 +1,7 @@
 source $VIMRUNTIME/defaults.vim
 
 set fileencodings=utf-8,cp932
-syntax on
-syntax enable
+filetype plugin indent on
 colorscheme iceberg
 set relativenumber
 set cursorline
@@ -29,29 +28,6 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 let g:mapleader = "\<Space>"
 " スペース + wでファイル保存
 nnoremap <Leader>w :w<CR>
-"dein.vim install
-if &compatible
-  set nocompatible
-endif
-" Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
-
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-filetype plugin indent on
-syntax enable
 "gorillaさん設定 dein.vim
 " dein.vim settings {{{
 " install dir {{{
@@ -101,3 +77,4 @@ if len(s:removed_plugins) > 0
   call dein#recache_runtimepath()
 endif
 " }}}
+syntax enable
