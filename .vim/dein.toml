@@ -9,3 +9,17 @@ repo = 'junegunn/fzf.vim'
 
 [[plugins]]
 repo = 'markonm/traces.vim'
+
+[[plugins]]
+repo  = 'phpactor/phpactor'
+on_ft = ['php']
+build = 'composer install'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'tpope/vim-unimpaired'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'

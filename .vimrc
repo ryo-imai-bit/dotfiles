@@ -1,7 +1,6 @@
 source $VIMRUNTIME/defaults.vim
 
 set fileencodings=utf-8,cp932
-filetype plugin indent on
 colorscheme iceberg
 set relativenumber
 set cursorline
@@ -12,16 +11,26 @@ if has('persistent_undo')
 	exe 'set undodir=' .. undo_path
 	set undofile
 endif
+"mastring vim undofile setting
+"set undo file
+"if !isdirectory(expand("$HOME/.vim/undodir"))
+"   call mkdir(expand("$HOME/.vim/undodir"), "p")
+"endif
+"set undodir=$HOME/.vim/undodir
+set helplang=ja
 set smartindent
 set clipboard+=unnamed
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set backspace=2
 set expandtab
 set laststatus=2
 set wildmenu
+set wildmode=list:longest,full "最長マッチまで補完してから自動保管メニューを開く
 set ignorecase
 set smartcase
+set foldmethod=indent
 " Escを2回押すとハイライトを消す
 nnoremap <Esc><Esc> :nohlsearch<CR>
 " <Leader>というプレフィックスキーにスペースを使用する
@@ -77,4 +86,9 @@ if len(s:removed_plugins) > 0
   call dein#recache_runtimepath()
 endif
 " }}}
+" tmuxでvimのcolorがうまくいかなかったので追記
+set background=dark
+set t_Co=256
+"
+filetype plugin indent on
 syntax enable "color schemaが読まれた後
