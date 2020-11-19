@@ -90,5 +90,12 @@ endif
 set background=dark
 set t_Co=256
 "
+"vim-airline
+let g:airline#extensions#tabline#enabled = 1
+"vim-airlinetheme
+let g:airline_theme='light'
+"vim-prettier
+packloadall
+
 filetype plugin indent on
 syntax enable "color schemaが読まれた後
