@@ -30,7 +30,6 @@ set wildmenu
 set wildmode=list:longest,full "最長マッチまで補完してから自動保管メニューを開く
 set ignorecase
 set smartcase
-set foldmethod=indent
 " Escを2回押すとハイライトを消す
 nnoremap <Esc><Esc> :nohlsearch<CR>
 " <Leader>というプレフィックスキーにスペースを使用する
@@ -96,6 +95,31 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='light'
 "vim-prettier
 packloadall
+
+"phpactor
+""""""""""""""""""""
+" 画面を分割して定義元へのジャンプ
+function! DefinitionJumpWithPhpactor()
+    split
+    call phpactor#GotoDefinition()
+endfunction
+" カーソル下のクラスやメンバの定義元にジャンプ
+nmap <silent><Leader>o      :<C-u>call phpactor#GotoDefinition()<CR>
+" useの補完
+nmap <silent><Leader>u      :<C-u>call phpactor#UseAdd()<CR>
+" コンテキストメニューの起動(カーソル下のクラスやメンバに対して実行可能な選択肢を表示してくれます)
+nmap <silent><Leader>mm     :<C-u>call phpactor#ContextMenu()<CR>
+" ナビゲーションメニューの起動(クラスの参照元を列挙したり、他ファイルへのジャンプなど)
+nmap <silent><Leader>nn     :<C-u>call phpactor#Navigate()<CR>
+" オムニ補完
+autocmd FileType php setlocal omnifunc=phpactor#Complete
+" split → jump
+nmap <silent><C-w><Leader>o :<C-u>call DefinitionJumpWithPhpactor()<CR>
+" カーソル下のクラスや変数の情報を表示する
+" 他のエディタで、マウスカーソルをおいたときに表示されるポップアップなどに相当
+vmap <silent><Leader>hh     :<C-u>call phpactor#Hover()<CR>
+
+""""""""""""""""""""
 
 filetype plugin indent on
 syntax enable "color schemaが読まれた後
