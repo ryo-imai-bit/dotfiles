@@ -95,9 +95,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='light'
 "vim-prettier
 packloadall
+command! Bd :bp | :sp | :bn | :bd "ウィンドウを閉じずにバッファを閉じる
 
 "phpactor
 """"""""""""""""""""
+
 " 画面を分割して定義元へのジャンプ
 function! DefinitionJumpWithPhpactor()
     split
@@ -122,4 +124,5 @@ vmap <silent><Leader>hh     :<C-u>call phpactor#Hover()<CR>
 """"""""""""""""""""
 
 filetype plugin indent on
+autocmd QuickFixCmdPost *grep* cwindow "automatically open cwindow when vimgrep or grep called
 syntax enable "color schemaが読まれた後
