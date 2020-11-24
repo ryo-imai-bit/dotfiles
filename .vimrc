@@ -122,7 +122,12 @@ nmap <silent><C-w><Leader>o :<C-u>call DefinitionJumpWithPhpactor()<CR>
 vmap <silent><Leader>hh     :<C-u>call phpactor#Hover()<CR>
 
 """"""""""""""""""""
+autocmd QuickFixCmdPost *grep* cwindow "automatically open cwindow when vimgrep or grep called
+" be accustomed to key bindings in vim
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>>
+map <right> <nop>
 
 filetype plugin indent on
-autocmd QuickFixCmdPost *grep* cwindow "automatically open cwindow when vimgrep or grep called
 syntax enable "color schemaが読まれた後

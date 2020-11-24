@@ -19,3 +19,4 @@ fi
 alias composer="php ~/composer.phar"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH=$PATH:$HOME/.nodebrew/current/bin
