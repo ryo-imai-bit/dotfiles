@@ -13,4 +13,4 @@
 [color]
 	ui = true
 [alias]
-	graph = log
+	graph = log --graph

@@ -96,33 +96,53 @@ let g:airline_theme='light'
 "vim-prettier
 packloadall
 command! Bd :bp | :sp | :bn | :bd "ウィンドウを閉じずにバッファを閉じる
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-"phpactor
-""""""""""""""""""""
-
-" 画面を分割して定義元へのジャンプ
-function! DefinitionJumpWithPhpactor()
-    split
-    call phpactor#GotoDefinition()
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-" カーソル下のクラスやメンバの定義元にジャンプ
-nmap <silent><Leader>o      :<C-u>call phpactor#GotoDefinition()<CR>
-" useの補完
-nmap <silent><Leader>u      :<C-u>call phpactor#UseAdd()<CR>
-" コンテキストメニューの起動(カーソル下のクラスやメンバに対して実行可能な選択肢を表示してくれます)
-nmap <silent><Leader>mm     :<C-u>call phpactor#ContextMenu()<CR>
-" ナビゲーションメニューの起動(クラスの参照元を列挙したり、他ファイルへのジャンプなど)
-nmap <silent><Leader>nn     :<C-u>call phpactor#Navigate()<CR>
-" オムニ補完
-autocmd FileType php setlocal omnifunc=phpactor#Complete
-" split → jump
-nmap <silent><C-w><Leader>o :<C-u>call DefinitionJumpWithPhpactor()<CR>
-" カーソル下のクラスや変数の情報を表示する
-" 他のエディタで、マウスカーソルをおいたときに表示されるポップアップなどに相当
-vmap <silent><Leader>hh     :<C-u>call phpactor#Hover()<CR>
 
-""""""""""""""""""""
-autocmd QuickFixCmdPost *grep* cwindow "automatically open cwindow when vimgrep or grep called
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" coc.nvim
+"
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+" end
+
+"automatically open cwindow when vimgrep or grep called
+autocmd QuickFixCmdPost *grep* cwindow 
+
 " be accustomed to key bindings in vim
 map <up> <nop>
 map <down> <nop>
