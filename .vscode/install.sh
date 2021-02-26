@@ -13,6 +13,7 @@ ln -s "$SCRIPT_DIR/settings.json" "${VSCODE_SETTING_DIR}/settings.json"
 cat extensions | while read line
 do
      code --install-extension $line
- done
+done
 
- code --list-extensions > extensions
+code --list-extensions > extensions
+
