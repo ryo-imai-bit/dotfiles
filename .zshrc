@@ -18,6 +18,9 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # noebrew
 export PATH=$PATH:$HOME/.nodebrew/current/bin
+#golang
+export PATH=$PATH:`go env GOPATH`/bin
+eval `opam env`
 
 # aliases
 alias brewupdate="brew update && brew upgrade && brew cleanup"
