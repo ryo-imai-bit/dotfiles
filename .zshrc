@@ -18,16 +18,10 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # noebrew
 export PATH=$PATH:$HOME/.nodebrew/current/bin
-# peco
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
-}
 
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
-
+#golang
+export PATH=$PATH:`go env GOPATH`/bin
+eval `opam env`
 
 # aliases
 alias brewupdate="brew update && brew upgrade && brew cleanup"
