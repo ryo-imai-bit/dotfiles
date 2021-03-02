@@ -19,9 +19,14 @@ fi
 # noebrew
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 
-#golang
-export PATH=$PATH:`go env GOPATH`/bin
-eval `opam env`
+if type "go" > /dev/null 2>&1; then
+    # Go
+    export PATH=$PATH:`go env GOPATH`/bin
+fi
+if type "opam" > /dev/null 2>&1; then
+    # Ocaml
+    eval `opam env`
+fi
 
 # aliases
 alias brewupdate="brew update && brew upgrade && brew cleanup"
