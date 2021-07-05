@@ -27,6 +27,10 @@ if type "opam" > /dev/null 2>&1; then
     # Ocaml
     eval `opam env`
 fi
+if [ -e ~/flutter/bin ]; then
+    # Flutter
+    export PATH="$PATH:$HOME/flutter/bin"
+fi
 
 # aliases
 alias brewupdate="brew update && brew upgrade && brew cleanup"
