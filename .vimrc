@@ -36,6 +36,8 @@ nnoremap <Esc><Esc> :nohlsearch<CR>
 let g:mapleader = "\<Space>"
 " スペース + wでファイル保存
 nnoremap <Leader>w :w<CR>
+
+
 "gorillaさん設定 dein.vim
 " dein.vim settings {{{
 " install dir {{{
@@ -123,7 +125,7 @@ endif
 " end
 
 "automatically open cwindow when vimgrep or grep called
-autocmd QuickFixCmdPost *grep* cwindow 
+" autocmd QuickFixCmdPost *grep* cwindow 
 
 " be accustomed to key bindings in vim
 map <up> <nop>
