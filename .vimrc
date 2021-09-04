@@ -2,7 +2,7 @@ source $VIMRUNTIME/defaults.vim
 
 set fileencodings=utf-8,cp932
 colorscheme iceberg
-set relativenumber
+set number
 set cursorline
 set hlsearch
 set incsearch
