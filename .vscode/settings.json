@@ -37,4 +37,6 @@
     },
     "workbench.colorTheme": "GitHub Dark",
     "window.zoomLevel": -2,
+    // auto close tag
+    "auto-close-tag.disableOnLanguage": ["php"],
 }
