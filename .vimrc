@@ -37,6 +37,14 @@ let g:mapleader = "\<Space>"
 " スペース + wでファイル保存
 nnoremap <Leader>w :w<CR>
 
+" autocomlete parenthis
+inoremap {<CR> {<CR>}<Esc>ko
+inoremap (<CR> (<CR>)<Esc>ko
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>
 
 "gorillaさん設定 dein.vim
 " dein.vim settings {{{
