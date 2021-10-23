@@ -135,3 +135,5 @@ map <right> <nop>
 
 filetype plugin indent on
 syntax enable "color schemaが読まれた後
+
+set rtp+=/opt/homebrew/opt/fzf

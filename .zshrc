@@ -58,3 +58,5 @@ alias excite="cd ~/Documents/GitHub/excite"
 alias ide="~/.scripts/ide.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval $(/opt/homebrew/bin/brew shellenv)
