@@ -1,6 +1,7 @@
 akamud.vscode-theme-onedark
 azemoh.one-monokai
 benjaminadk.emojis4git
+bmewburn.vscode-intelephense-client
 christian-kohler.path-intellisense
 chrmarti.regex
 CoenraadS.bracket-pair-colorizer
@@ -12,8 +13,8 @@ EditorConfig.EditorConfig
 emmanuelbeziat.vscode-great-icons
 Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
+equinusocio.vsc-material-theme-icons
 esbenp.prettier-vscode
-felixfbecker.php-intellisense
 fisheva.eva-theme
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
