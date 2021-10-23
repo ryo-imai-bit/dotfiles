@@ -7,13 +7,13 @@
 	required = true
 	clean = git-lfs clean -- %f
 [commit]
-	template = /Users/ryo-imai/.stCommitMsg
+	template = ~/.stCommitMsg
 [color]
 	ui = true
 [alias]
 	graph = log --graph
 [ghq]
-	root = /Users/ryo-imai/go/src
-	root = /Users/ryo-imai/ghq
+	root = ~/go/src
+	root = ~/ghq
 [pull]
 	rebase = false
