@@ -48,13 +48,9 @@ alias brewupdate="brew update && brew upgrade && brew cleanup"
 alias g="git branch; git status"
 # alias for composer
 alias composer="php ~/composer.phar"
-# project paths
-alias repo="cd ~/Documents/GitHub/"
-alias goo="cd ~/Documents/GitHub/goo"
-alias rank-king="cd ~/Documents/GitHub/rank-king"
-alias credit="cd ~/Documents/GitHub/goo-child-credit"
-alias excite="cd ~/Documents/GitHub/excite"
 
 alias ide="~/.scripts/ide.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval $(/opt/homebrew/bin/brew shellenv)
