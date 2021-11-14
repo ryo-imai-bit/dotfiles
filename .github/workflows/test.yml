@@ -7,8 +7,6 @@ jobs:
     runs-on: macos-11
     steps:
       - uses: actions/checkout@v1
-      - name: Install required packages
-        run: apt-get update && apt-get install -y git sudo
       - name: Install dotfiles
         run: install.sh
       - uses: actions/checkout@v1
