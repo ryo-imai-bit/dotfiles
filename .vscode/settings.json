@@ -18,7 +18,7 @@
     "liveshare.presence": true,
     "php.suggest.basic": false,
     "php.validate.executablePath": "/usr/local/bin/php",
-    "workbench.iconTheme": "simple-icons",
+    "workbench.iconTheme": "vscode-great-icons",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },

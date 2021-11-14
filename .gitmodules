@@ -1,6 +1,0 @@
-[submodule ".zprezto"]
-	path = .zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
-[submodule "/Users/ryo-imai/dotfiles/.fzf"]
-	path = /Users/ryo-imai/dotfiles/.fzf
-	url = https://github.com/junegunn/fzf.git
