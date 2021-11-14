@@ -18,7 +18,7 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$H
 # install apps
 brew install fzf
 # To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
+$(brew --prefix)/opt/fzf/install -all
 
 brew install nodebrew
 brew install ghq
