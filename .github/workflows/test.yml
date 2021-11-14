@@ -9,5 +9,4 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install dotfiles
         run: zsh install.sh
-      - uses: actions/checkout@v1
 

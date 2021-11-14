@@ -23,4 +23,3 @@ $(brew --prefix)/opt/fzf/install --no-update-rc
 brew install nodebrew
 brew install ghq
 
-echo $?
