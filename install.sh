@@ -1,29 +1,26 @@
 #!/bin/zsh
+set -ue
 
-# add submodule
-git submodule update --init --recursive
-# prezto
-setopt EXTENDED_GLOB
-for rcfile in ${ZDOTDIR:-$HOME}/dotfiles/.zprezto/runcoms/^README.md(.N); do
- ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
 # symlink dotfiles
-ln -sf ~/dotfiles/.zprezto ~/.zprezto
-ln -sf ~/dotfiles/.zpreztorc ~/.zpreztorc
+ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
+ln -sf $HOME/dotfiles/.vim $HOME/.vim
+ln -sf $HOME/dotfiles/.vimrc $HOME/.vimrc
+ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/dotfiles/. $HOME/.zshrc
+ln -sf $HOME/dotfiles/.zpreztorc $HOME/.zpreztorc
 
-# composer install on $HOME
-EXPECTED_CHECKSUM="$(wget -q -O - https://composer.github.io/installer.sig)"
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-ACTUAL_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+# zprezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-if [ "$EXPECTED_CHECKSUM" != "$ACTUAL_CHECKSUM" ]
-then
-    >&2 echo 'ERROR: Invalid installer checksum'
-    rm composer-setup.php
-    exit 1
-fi
+# install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-php composer-setup.php --quiet
-RESULT=$?
-rm composer-setup.php
-echo $RESULT
+# install apps
+brew install fzf
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+
+brew install nodebrew
+brew install ghq
+
+echo $?
