@@ -6,7 +6,6 @@ ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/.vim $HOME/.vim
 ln -sf $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
-ln -sf $HOME/dotfiles/. $HOME/.zshrc
 ln -sf $HOME/dotfiles/.zpreztorc $HOME/.zpreztorc
 
 # zprezto
