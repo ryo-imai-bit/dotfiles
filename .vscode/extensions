@@ -1,5 +1,4 @@
 akamud.vscode-theme-onedark
-amiralizadeh9480.laravel-extra-intellisense
 asvetliakov.vscode-neovim
 azemoh.one-monokai
 benjaminadk.emojis4git
@@ -8,6 +7,7 @@ breezelin.phpstan
 christian-kohler.path-intellisense
 chrmarti.regex
 CoenraadS.bracket-pair-colorizer
+cschlosser.doxdocgen
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 donjayamanne.githistory
@@ -15,6 +15,7 @@ dracula-theme.theme-dracula
 eamodio.gitlens
 ecmel.vscode-html-css
 EditorConfig.EditorConfig
+elmTooling.elm-ls-vscode
 emmanuelbeziat.vscode-great-icons
 Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
@@ -26,8 +27,10 @@ formulahendry.auto-rename-tag
 formulahendry.code-runner
 GitHub.github-vscode-theme
 golang.go
+hbenl.vscode-test-explorer
 hediet.vscode-drawio
 ionutvmi.path-autocomplete
+jeff-hykin.better-cpp-syntax
 johnpapa.winteriscoming
 MehediDracula.php-namespace-resolver
 mhutchie.git-graph
@@ -38,7 +41,14 @@ ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-containers
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode-remote.remote-wsl
+ms-vscode.cmake-tools
 ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
+ms-vscode.test-adapter-converter
 ms-vscode.vscode-typescript-next
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
@@ -47,8 +57,6 @@ neilbrayfield.php-docblocker
 ocamllabs.ocaml-platform
 octref.vetur
 oderwat.indent-rainbow
-onecentlin.laravel-blade
-onecentlin.laravel5-snippets
 oouo-diogo-perdigao.docthis
 Perkovec.emoji
 pranaygp.vscode-css-peek
@@ -58,7 +66,9 @@ shardulm94.trailing-spaces
 shevaua.phpcs
 stevencl.addDocComments
 streetsidesoftware.code-spell-checker
+twxs.cmake
 whizkydee.material-palenight-theme
 wingrunr21.vscode-ruby
+xdebug.php-debug
 yzhang.markdown-all-in-one
 zhuangtongfa.material-theme
