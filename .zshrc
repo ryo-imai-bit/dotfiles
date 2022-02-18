@@ -46,8 +46,6 @@ bindkey '^]' ghq-fzf
 # aliases
 alias brewupdate="brew update && brew upgrade && brew cleanup"
 alias g="git branch; git status"
-# alias for composer
-alias composer="php ~/composer.phar"
 
 alias ide="~/.scripts/ide.sh"
 
