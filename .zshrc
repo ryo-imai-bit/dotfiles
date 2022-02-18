@@ -26,9 +26,9 @@ if type "opam" > /dev/null 2>&1; then
     # Ocaml
     eval `opam env`
 fi
-if [ -e ~/flutter/bin ]; then
-    # Flutter
-    export PATH="$PATH:$HOME/flutter/bin"
+if type "rbenv" > /dev/null 2>&1; then
+    # Ruby
+    eval "$(rbenv init - zsh)"
 fi
 
 # ghq cd project
@@ -51,4 +51,3 @@ alias ide="~/.scripts/ide.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval $(/opt/homebrew/bin/brew shellenv)
