@@ -10,6 +10,8 @@
     "terminal.integrated.copyOnSelection": true,
     "files.trimFinalNewlines": true,
     "editor.wordWrap": "off",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active",
     // vscode-neovim
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     // vsode-drawio
@@ -51,4 +53,5 @@
     },
     "ruby.format": "rubocop",
     "ruby.intellisense": "rubyLocate", // use rubocop for formatting
+    "solargraph.commandPath": "/Users/imairyo/.rbenv/shims/solargraph"
 }
