@@ -15,7 +15,6 @@ dracula-theme.theme-dracula
 eamodio.gitlens
 ecmel.vscode-html-css
 EditorConfig.EditorConfig
-elmTooling.elm-ls-vscode
 emmanuelbeziat.vscode-great-icons
 Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
@@ -61,7 +60,6 @@ oouo-diogo-perdigao.docthis
 Perkovec.emoji
 pranaygp.vscode-css-peek
 rebornix.ruby
-sbrink.elm
 shardulm94.trailing-spaces
 shevaua.phpcs
 stevencl.addDocComments
