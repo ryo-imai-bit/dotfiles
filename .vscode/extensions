@@ -38,6 +38,8 @@ ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
 ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
@@ -46,11 +48,11 @@ ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
+ms-vscode.remote-explorer
 ms-vscode.test-adapter-converter
 ms-vscode.vscode-typescript-next
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
-ms-vsliveshare.vsliveshare-pack
 neilbrayfield.php-docblocker
 ocamllabs.ocaml-platform
 octref.vetur
@@ -58,14 +60,11 @@ oderwat.indent-rainbow
 oouo-diogo-perdigao.docthis
 Perkovec.emoji
 pranaygp.vscode-css-peek
-rebornix.ruby
 shardulm94.trailing-spaces
 shevaua.phpcs
-stevencl.addDocComments
 streetsidesoftware.code-spell-checker
 twxs.cmake
 whizkydee.material-palenight-theme
-wingrunr21.vscode-ruby
 xdebug.php-debug
 yzhang.markdown-all-in-one
 zhuangtongfa.material-theme

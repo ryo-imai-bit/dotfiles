@@ -1,8 +1,7 @@
 #
 # Executes commands at the start of an interactive session.
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
+# Authors: #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
 # Source Prezto.
@@ -46,8 +45,14 @@ bindkey '^]' ghq-fzf
 # aliases
 alias brewupdate="brew update && brew upgrade && brew cleanup"
 alias g="git branch; git status"
+alias gta='tgdate=$(date "+%Y%m%d%H%M%S"); git tag -a staging-$tgdate -m stg && git push origin staging-$tgdate'
+alias gtae='tgdate=$(date "+%Y%m%d%H%M%S"); git tag -a epic-$tgdate -m stg && git push origin epic-$tgdate'
+alias gtad='tgdate=$(date "+%Y%m%d%H%M%S"); git tag -a development-ddl-jsen-$tgdate -m stg && git push origin development-ddl-jsen-$tgdate'
+alias gtas='tgdate=$(date "+%Y%m%d%H%M%S"); git tag -a staging-ddl-jsen-$tgdate -m stg && git push origin staging-ddl-jsen-$tgdate'
 
 alias ide="~/.scripts/ide.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

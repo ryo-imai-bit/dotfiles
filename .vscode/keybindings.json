@@ -37,5 +37,9 @@
     {
         "key": "shift+cmd+]",
         "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "cmd+] cmd+c",
+        "command": "workbench.panel.chat.view.copilot.focus"
     }
 ]
